@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mundo Agéntico</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#16202b">
+<style>body{margin:0;font:16px system-ui,sans-serif;background:#16202b;color:#e8edf2;display:grid;place-items:center;min-height:100vh;text-align:center}img{width:96px;height:96px;border-radius:20px}a{color:#7ab5f5}</style>
+</head>
+<body>
+<main>
+<img src="icon-192.png" alt="">
+<p>Abriendo Juan Mundo Agéntico…</p>
+<p><a href="https://claude.ai/artifact/ALNdgno8dzASF7FyxG1iBQ">Si no se abre, pulsa aquí</a></p>
+</main>
+<script>
+// Al abrir desde el icono, salta a la página privada. Si se acaba de abrir para instalar, espera un poco para dejar tiempo a "Añadir a pantalla de inicio".
+var esIcono = window.matchMedia('(display-mode: standalone)').matches || document.referrer === '' && history.length <= 1;
+setTimeout(function(){ location.href = 'https://claude.ai/artifact/ALNdgno8dzASF7FyxG1iBQ'; }, esIcono ? 300 : 8000);
+</script>
+</body>
+</html>
